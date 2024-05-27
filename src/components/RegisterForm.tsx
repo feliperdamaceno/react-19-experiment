@@ -1,6 +1,8 @@
 import z from 'zod'
 
 import { useActionState } from 'react'
+import { SubmitButton } from '@/components'
+import { wait } from '@/utils'
 
 const schema = z.object({
   firstName: z.string().max(100),
@@ -26,6 +28,9 @@ async function registerFormAction(
 ): Promise<FormState> {
   const data = Object.fromEntries(formData)
   const validation = schema.safeParse(data)
+
+  await wait(2000)
+  console.log(validation.data)
 
   if (!validation.success) {
     const errorMap = validation.error.flatten().fieldErrors
@@ -131,13 +136,9 @@ export default function RegisterForm() {
         </label>
       </div>
 
-      <button
-        className="px-3 py-1.5 rounded-sm hover:scale-[102%] active:scale[98%] transition-transform bg-zinc-800 text-white w-fit"
-        disabled={isPending}
-        type="submit"
-      >
-        Register
-      </button>
+      {isPending ? <div>Loading...</div> : null}
+
+      <SubmitButton>Register</SubmitButton>
     </form>
   )
 }

@@ -1,9 +1,10 @@
-import { RegisterForm } from './components'
+import { RegisterForm, Comments } from './components'
 
 export default function App() {
   return (
     <main className="container flex-1 w-full mx-auto place-content-center">
-      <RegisterForm />
+      <Comments />
+      {/* <RegisterForm /> */}
     </main>
   )
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "message": "react is cool :P",
+    "author": "mario",
+    "sending": false
+  },
+  {
+    "message": "I like that feature!",
+    "author": "luigi",
+    "sending": false
+  },
+  {
+    "message": "It could be worst lol '-'",
+    "author": "toad",
+    "sending": false
+  }
+]
