@@ -29,7 +29,7 @@ async function registerFormAction(
   const data = Object.fromEntries(formData)
   const validation = schema.safeParse(data)
 
-  await wait(2000)
+  await wait()
   console.log(validation.data)
 
   if (!validation.success) {

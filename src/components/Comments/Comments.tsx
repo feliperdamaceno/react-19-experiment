@@ -8,7 +8,7 @@ import { CommentItem } from './CommentItem'
 import { SubmitButton } from '@/components'
 
 async function createComment(comment: Comment): Promise<Comment> {
-  await wait(2000) // emulate API call
+  await wait() // emulate API call
   return comment
 }
 
