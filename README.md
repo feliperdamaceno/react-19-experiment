@@ -1,3 +1,3 @@
 ## react-19-overview
 
-Quick testing of new React 19 features.
+A quick app prototype using the new beta features of React 19.
